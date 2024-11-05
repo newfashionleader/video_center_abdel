@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "cc60d3e3-09e4-4c95-8049-ba2a8842e7e6",
+		"name": "Exam_Api_Jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38300301"
+	},
+	"item": [
+		{
+			"name": "create user 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"joesinga@cfitech.be\",\n  \"password\": \"$2y$13$Famc4nWm/XJy.bb9lc1tQ.6lvcZg553p1LG5W5FXu2almQOSYbcJm\",\n  \"firstname\": \"Joe\",\n  \"lastname\": \"Singa\",\n\n  \"createdAt\": \"2024-11-05T13:50:47.318Z\",\n  \"updatedAt\": \"2024-11-05T13:50:47.318Z\",\n  \"verified\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/users",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"create user\", pm.response.json().id);",
+							"pm.environment.set(\"create user 2\", pm.response.json().userIdentifier);",
+							"",
+							"pm.test(\"Status test\", function() {",
+							"    pm.response.to.have.status(201)",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"jeansinga@cfitech.be\",\n  \"password\": \"$2y$13$Famc4nWm/XJy.bb9lc1tQ.6lvcZg553p1LG5W5FXu2almQOSYbcJm\",\n  \"firstname\": \"Cool\",\n  \"lastname\": \"LL\",\n\n  \"createdAt\": \"2024-11-05T13:50:47.318Z\",\n  \"updatedAt\": \"2024-11-05T13:50:47.318Z\",\n  \"verified\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/users",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"create user3\", pm.response.json().id);",
+							"pm.environment.set(\"create user 3\", pm.response.json().userIdentifier);",
+							"",
+							"",
+							"pm.test(\"Status test\", function() {",
+							"   pm.response.to.have.status(201)",
+							"})",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"bonsinga@cfitech.be\",\n  \"password\": \"$2y$13$Famc4nWm/XJy.bb9lc1tQ.6lvcZg553p1LG5W5FXu2almQOSYbcJm\",\n  \"firstname\": \"Pape\",\n  \"lastname\": \"Cool\",\n\n  \"createdAt\": \"2024-11-05T13:50:47.318Z\",\n  \"updatedAt\": \"2024-11-05T13:50:47.318Z\",\n  \"verified\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/users",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"create user 4\", pm.response.json().id);",
+							"pm.environment.set(\"create user 4\", pm.response.json().userIdentifier);",
+							"",
+							"",
+							"pm.test(\"Status test\", function() {",
+							"   pm.response.to.have.status(201)",
+							"})",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"stylesinga@cfitech.be\",\n  \"password\": \"$2y$13$Famc4nWm/XJy.bb9lc1tQ.6lvcZg553p1LG5W5FXu2almQOSYbcJm\",\n  \"firstname\": \"Style\",\n  \"lastname\": \"Singa\",\n\n  \"createdAt\": \"2024-11-05T13:50:47.318Z\",\n  \"updatedAt\": \"2024-11-05T13:50:47.318Z\",\n  \"verified\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/users ",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create admin user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"admin user\", pm.response.json().id);",
+							"pm.environment.set(\"admin user \", pm.response.json().userIdentifier);",
+							"",
+							"",
+							"pm.test(\"Status test\", function() {",
+							"   pm.response.to.have.status(201)",
+							"})",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"people@cfitech.be\",\n  \"roles\": [\n    \"ROLE_ADMIN\"\n  ],\n  \"password\": \"$2y$13$Famc4nWm/XJy.bb9lc1tQ.6lvcZg553p1LG5W5FXu2almQOSYbcJm\",\n  \"firstname\": \"People\",\n  \"lastname\": \"Thanos\",\n  \"createdAt\": \"2024-11-05T14:27:46.784Z\",\n  \"updatedAt\": \"2024-11-05T14:27:46.784Z\",\n  \"verified\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/users",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try list of users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/users",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try delete user 4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/users/4",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
